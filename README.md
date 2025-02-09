@@ -78,7 +78,8 @@ Column Attributes
 * default=<value> – Sets a default value.
 * server_default=<value> – Defines a default at the database level.
 * ForeignKey('<table>.<column>') – Defines a foreign key relationship.
-* Relationships & Foreign Keys
+
+Relationships & Foreign Keys
 * relationship('<Model>') – Defines an ORM relationship.
 * backref='<attribute>' – Adds a reverse relation.
 * back_populates='<attribute>' – Explicitly sets the related attribute.
