@@ -8,10 +8,28 @@ My ORM framework specificaton taking the best ideas from the major framework out
 In Java EE/Jakarta EE with JPA, the main annotations to define an entity are:
 
 * @Entity – Marks a class as a JPA entity.
+  * name	Specifies the name of the entity (optional). If not specified, the entity's class name is used.
+  * schema	Defines the schema for the entity in the database (optional).
+  * catalog	Specifies the catalog in the database (optional).
+  * listeners	Defines a list of entity listener classes that will be invoked during the entity lifecycle.
 * @Table – Specifies the database table name.
+  * name	Specifies the name of the table in the database. If not provided, the default is the entity class name.
+  * catalog	Specifies the catalog name for the table (optional).
+  * schema	Defines the schema for the table (optional).
+  * uniqueConstraints	Defines one or more unique constraints on columns in the table.
+  * indexes	Defines one or more indexes on columns in the table.
 * @Id – Marks the primary key field.
 * @GeneratedValue – Specifies primary key generation strategy.
 * @Column – Customizes column mapping.
+  * name	Sets the column name in the database.
+  * length	Specifies the maximum length (for String types).
+  * nullable	Defines if NULL values are allowed.
+  * unique	Enforces a unique constraint.
+  * insertable	Controls whether the column is included in SQL INSERT.
+  * updatable	Controls whether the column is included in SQL UPDATE.
+  * columnDefinition	Defines the exact SQL column type.
+  * precision & scale	Used for DECIMAL/NUMERIC types (e.g., precision=10, scale=2).
+
 * @Transient – Excludes a field from persistence.
 * @Lob – Marks a field as a Large Object (BLOB or CLOB).
 * @Enumerated – Specifies how enums should be stored.
@@ -101,3 +119,18 @@ Table-Level Attributes
 
 This covers the core attributes needed to define a table in SQLAlchemy ORM. Let me know if you need further details.
 
+#### V Language
+* [table: 'users'] → Maps the struct to the users table.
+* [sql: 'full_name'] → Maps name to full_name in the DB.
+* [primary; sql: serial] → Marks id as the primary key and auto-increments it.
+* [unique] → Enforces uniqueness on name.
+
+
+* primary	Marks as primary key.
+* sql: 'column_name'	Maps field to a specific column name.
+* unique	Enforces uniqueness.
+* skip	Excludes field from database mapping.
+* sql_type: 'datatype'	Specifies the SQL data type.
+* default: value	Sets a default value.
+* nullable	Allows NULL values.
+* sql: serial	Auto-incrementing primary key.
