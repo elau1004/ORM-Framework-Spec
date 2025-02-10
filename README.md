@@ -5,6 +5,8 @@ My ORM framework specificaton taking the best ideas from the major framework out
 ### Annotation
 
 #### Java Persistence Architecture
+SEE: [Java Persitence](https://en.wikibooks.org/wiki/Java_Persistence)
+SEE: [Pro JPA 2](https://github.com/yiailake/book/blob/master/%5BJAVA%5D%5BPro%20JPA%202%20-%20Mastering%20the%20Java%20Persistence%20API%5D.pdf)
 In Java EE/Jakarta EE with JPA, the main annotations to define an entity are:
 
 * @Entity – Marks a class as a JPA entity.
@@ -54,6 +56,8 @@ For relationships:
 * @DiscriminatorValue – Specifies the entity type value.
 
 #### Entity Framework Core
+SEE: [Entity Framework](https://learn.microsoft.com/en-us/ef/core/modeling/)
+
 **Table**
 * [Table("Blogs")]
 
